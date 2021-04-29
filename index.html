@@ -7,12 +7,13 @@
     <title>Swapping</title>
   
 </head>
-</head>
 <body>
     <h1 style="text-decoration: underline; color: red;">Swap using Pass by Value</h1>
    
 <script>
-    var x=10,y=20;  
+    alert("Enter 2 values for swapping using Pass by Value and Pass by Reference")
+    var x=prompt("Enter 1st value(x): ")  
+    var y=prompt("Enter 2nd value(y): ")
     document.write("Values before swapping: x= "+x+"  y= "+y+"<br>")
     function swap(a,b){
         let temp;
@@ -29,28 +30,29 @@
 <h1 style="text-decoration: underline; color: red;">Swap using Pass by Reference</h1>
 
 <script>
-        function PassbyReference(obj) {
-        let tmp = obj.a;
-        obj.a = obj.b;
-        obj.b = tmp;
     
-        document.write(`Inside Pass By Reference 
-            Function: a = ${obj.a} b = ${obj.b} <br>`);
-    }
-    
-    let obj = {
-        a: 10,
-        b: 20
-    
-    }
-    document.write(`Before calling Pass By Reference 
+    function PassbyReference(obj) {
+    let tmp = obj.a;
+    obj.a = obj.b;
+    obj.b = tmp;
+
+    document.write(`Inside Pass By Reference 
         Function: a = ${obj.a} b = ${obj.b} <br>`);
-    
-    PassbyReference(obj)
-    
-    document.write(`After calling Pass By Reference 
-        Function: a = ${obj.a} b = ${obj.b} <br>`);
-        document.write("<h2>In Pass by reference, parameters passed as an arguments does not create its own copy, it refers to the original value so changes made inside function affect the original value. </h2>")
+}
+
+let obj = {
+    a: x,
+    b: y
+
+}
+document.write(`Before calling Pass By Reference 
+    Function: a = ${obj.a} b = ${obj.b} <br>`);
+
+PassbyReference(obj)
+
+document.write(`After calling Pass By Reference 
+    Function: a = ${obj.a} b = ${obj.b} <br>`);
+    document.write("<h2>In Pass by reference, parameters passed as an arguments does not create its own copy, it refers to the original value so changes made inside function affect the original value. </h2>")
 </script>
 </body>
 </html>
